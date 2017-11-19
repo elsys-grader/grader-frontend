@@ -1,0 +1,25 @@
+<mat-card class="example-card">
+    <mat-card-header>
+        <mat-card-title>Tasks</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-table #table [dataSource]="dataSource">
+            <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef> Task Name </mat-header-cell>
+                <mat-cell *matCellDef="let element"> 
+                        <a routerLink="{{element.position}}" routerLinkActive="active">
+                            {{element.name}}
+                        </a>
+                </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="['name']"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: ['name']"></mat-row>
+        </mat-table>
+    </mat-card-content>
+    <mat-card-actions>
+        <a mat-button routerLink="add" routerLinkActive="active">
+            Add task
+        </a>
+    </mat-card-actions>
+</mat-card>
+          
