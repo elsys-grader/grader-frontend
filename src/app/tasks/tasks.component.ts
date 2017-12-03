@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
+import { TasksService } from './tasks.service';
+import { Task } from './task';
 
 @Component({
     selector: 'grader-tasks',
@@ -7,21 +9,15 @@ import { MatTableDataSource } from '@angular/material';
     styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-    dataSource = new MatTableDataSource(TASKS_DATA);
+    public dataSource: MatTableDataSource<Task>;
 
-    constructor() { }
+    constructor(private taskService: TasksService) { }
 
     ngOnInit() {
+        this.taskService.getTasks().subscribe(
+            (tasks) => {
+                this.dataSource = new MatTableDataSource(tasks);
+            }
+        );
     }
 }
-
-export interface Task {
-    name: string;
-    position: number;
-}
-
-const TASKS_DATA: Task[] = [
-    {position: 1, name: 'Task 1'},
-    {position: 2, name: 'Task 2'},
-    {position: 3, name: 'Task 3'},
-];

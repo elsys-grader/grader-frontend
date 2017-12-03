@@ -7,7 +7,7 @@
             <ng-container matColumnDef="name">
                 <mat-header-cell *matHeaderCellDef> Task Name </mat-header-cell>
                 <mat-cell *matCellDef="let element"> 
-                        <a routerLink="{{element.position}}" routerLinkActive="active">
+                        <a routerLink="{{element.id}}" routerLinkActive="active">
                             {{element.name}}
                         </a>
                 </mat-cell>
@@ -22,4 +22,4 @@
         </a>
     </mat-card-actions>
 </mat-card>
-          
+    
