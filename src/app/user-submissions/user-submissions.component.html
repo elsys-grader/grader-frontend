@@ -1,0 +1,73 @@
+<!-- <mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Submission 1
+        </mat-panel-title>
+        <mat-panel-description>
+            100%
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-table #table [dataSource]="dataSource">
+        <ng-container matColumnDef="icon">
+            <mat-header-cell *matHeaderCellDef> Icon </mat-header-cell>
+            <mat-cell *matCellDef="let element"> 
+                <i class="material-icons" style="color:red">{{element.icon}}</i>
+                
+            </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> User </mat-header-cell>
+            <mat-cell *matCellDef="let element"> 
+                {{element.name}}
+            </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="grade">
+            <mat-header-cell *matHeaderCellDef> Max Grade </mat-header-cell>
+            <mat-cell *matCellDef="let element">
+                {{element.grade}}
+            </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="['icon', 'name', 'grade']"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: ['icon', 'name', 'grade']"></mat-row>
+    </mat-table>
+</mat-expansion-panel>
+
+<mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Submission 2
+            </mat-panel-title>
+            <mat-panel-description>
+                50%
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-table #table [dataSource]="dataSource">
+            <ng-container matColumnDef="icon">
+                <mat-header-cell *matHeaderCellDef> Icon </mat-header-cell>
+                <mat-cell *matCellDef="let element"> 
+                    <i class="material-icons" style="color:red">{{element.icon}}</i>
+                    
+                </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef> User </mat-header-cell>
+                <mat-cell *matCellDef="let element"> 
+                    {{element.name}}
+                </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="grade">
+                <mat-header-cell *matHeaderCellDef> Max Grade </mat-header-cell>
+                <mat-cell *matCellDef="let element"> 
+                    {{element.grade}}
+                </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="['icon', 'name', 'grade']"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: ['icon', 'name', 'grade']">
+                АААААа
+            </mat-row>
+        </mat-table>
+    </mat-expansion-panel> -->
+<ngx-datatable
+    [rows]="rows"
+    [columns]="columns">
+</ngx-datatable>
